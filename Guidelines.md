@@ -274,14 +274,15 @@ https://api.contoso.com/v1.0/people/7011042402/inbox
 ```
 
 ### 7.4 Supported methods
-Operations MUST use the proper HTTP methods whenever possible, and operation [safety and idempotency](https://tools.ietf.org/html/rfc2616#section-9.1) MUST be respected.
+Operations MUST use the proper HTTP methods whenever possible, and operation [idempotency and safety](https://tools.ietf.org/html/rfc2616#section-9.1) MUST be respected.
 HTTP methods are frequently referred to as the HTTP verbs.
 The terms are synonymous in this context, however the HTTP specification uses the term method.
 
 Below is a list of methods that Microsoft REST services SHOULD support.
 Not all resources will support all methods, but all resources using the methods below MUST conform to their usage.
+
 Method  | Description                                                                                                                | Is Idempotent | Is Safe
-------- | -------------------------------------------------------------------------------------------------------------------------- | ------------- |
+------- | -------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------- 
 GET     | Return the current value of an object                                                                                      | True | True
 PUT     | Replace an object, or create a named object, when applicable                                                               | True | False
 DELETE  | Delete an object                                                                                                           | True | False
